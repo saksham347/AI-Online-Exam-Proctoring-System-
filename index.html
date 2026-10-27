@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Exam Proctoring System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Exam Proctoring
+        </div>
+
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            System Online
+        </div>
+
+    </nav>
+
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Welcome Section -->
+        <div class="welcome-card">
+
+            <h1>AI Online Exam Proctoring System</h1>
+
+            <p>
+                Monitor online examinations using Artificial Intelligence
+                and real-time webcam analysis.
+            </p>
+
+           <button id="startExamBtn" onclick="window.location.href='/exam'">
+    Start Exam
+</button>
+
+        </div>
+
+
+        <!-- System Status -->
+        <div class="section-title">
+            <h2>Monitoring System</h2>
+        </div>
+
+
+        <!-- Feature Cards -->
+        <div class="dashboard">
+
+
+            <!-- Face Detection -->
+            <div class="card">
+
+                <div class="card-icon">
+                    👤
+                </div>
+
+                <h3>Face Detection</h3>
+
+                <p>
+                    Detect and monitor the candidate's face
+                    using the webcam.
+                </p>
+
+                <span class="feature-status">
+                    Ready
+                </span>
+
+            </div>
+
+
+            <!-- Multiple Person -->
+            <div class="card">
+
+                <div class="card-icon">
+                    👥
+                </div>
+
+                <h3>Multiple Person</h3>
+
+                <p>
+                    Detect if more than one person
+                    appears in the camera.
+                </p>
+
+                <span class="feature-status">
+                    Ready
+                </span>
+
+            </div>
+
+
+            <!-- Phone Detection -->
+            <div class="card">
+
+                <div class="card-icon">
+                    📱
+                </div>
+
+                <h3>Phone Detection</h3>
+
+                <p>
+                    Detect mobile phones and suspicious
+                    objects during the examination.
+                </p>
+
+                <span class="feature-status">
+                    Ready
+                </span>
+
+            </div>
+
+
+            <!-- Exam Status -->
+            <div class="card">
+
+                <div class="card-icon">
+                    📝
+                </div>
+
+                <h3>Exam Status</h3>
+
+                <p id="examStatus">
+                    Exam has not started yet.
+                </p>
+
+                <span id="examStatusBadge" class="feature-status">
+                    Not Started
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function startExam() {
+
+            document.getElementById("examStatus").innerText =
+                "Exam is currently running.";
+
+            document.getElementById("examStatusBadge").innerText =
+                "Exam Started";
+
+            document.getElementById("startExamBtn").innerText =
+                "Exam Running";
+
+            document.getElementById("startExamBtn").disabled = true;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

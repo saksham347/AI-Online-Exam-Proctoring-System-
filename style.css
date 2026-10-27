@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 70px;
+    background: #111827;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    color: white;
+}
+
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.nav-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+}
+
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+/* Welcome Card */
+
+.welcome-card {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 35px;
+}
+
+
+.welcome-card h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+
+.welcome-card p {
+    color: #6b7280;
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+.welcome-card button {
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+.welcome-card button:hover {
+    background: #1d4ed8;
+}
+
+
+.welcome-card button:disabled {
+    background: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* Section */
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+
+.section-title h2 {
+    font-size: 24px;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Cards */
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+
+    min-height: 250px;
+}
+
+
+.card-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+.card h3 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+
+.card p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+.feature-status {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+}
